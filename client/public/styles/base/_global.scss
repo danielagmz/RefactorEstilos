@@ -1,0 +1,42 @@
+.content {
+    &__title {
+        font-weight: bold;
+        font-size: 30px;
+        margin-bottom: 1rem;
+        color: var(--fondo);
+        background-color: var(--accent);
+        border-radius: 10px;
+        padding: 0rem 3rem;
+        text-align: center;
+    }
+
+    &__body {
+
+        &--table {
+            margin-top: 2rem;
+            width: 80%;
+            border-collapse: collapse;
+        }
+
+        &--bento {
+            width: 100%;
+            grid-template-columns: 1fr;
+            grid-template-areas:
+                'customize'
+                'profile'
+                'change-password'
+                'delete-account'
+            ;
+        }
+
+        &--30W {
+            min-width: 30%;
+        }
+
+        &--row {
+            display: flex;
+            gap: 1rem;
+        }
+    }
+}
+

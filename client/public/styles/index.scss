@@ -1,0 +1,24 @@
+/* Daniela gamez */
+@import url('https://cdn-uicons.flaticon.com/2.6.0/uicons-thin-rounded/css/uicons-thin-rounded.css');
+@import url('https://cdn-uicons.flaticon.com/2.6.0/uicons-thin-chubby/css/uicons-thin-chubby.css');
+@import url('https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css');
+@import url('https://fonts.googleapis.com/css2?family=Lexend');
+@import url('https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css');
+// Base
+@import './base/reset';
+@import './base/variables';
+@import './base/global';
+
+// Components
+@import './components/article';
+@import './components/form';
+@import './components/authOptions';
+@import './components/cabeceras';
+
+// Layouts
+@import './layouts/grid';
+
+// Pages
+
+@import './pages/anonimo';
+@import './pages/register';
