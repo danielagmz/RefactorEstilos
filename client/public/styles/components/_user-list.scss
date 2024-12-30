@@ -1,0 +1,9 @@
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+
+    &__header {
+        font-size: 1.2rem;
+        border-bottom: 2px solid var(--accent4);
+    }
+}

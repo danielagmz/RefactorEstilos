@@ -5,7 +5,12 @@
          <!-- crear_datalist_user()?> -->
       </datalist>
       <button class="busqueda-barra__button">
-         <i class="fi fi-rr-search-alt"></i>
+         <?php if (isset($userSearch) && $userSearch): ?>
+            <i class="fi fi-rr-member-search"></i>
+         <?php else: ?>
+            <i class="fi fi-rr-search-alt"></i>
+         <?php endif; ?>
+
       </button>
    </div>
    <div class="busqueda-barra cabeceras--paginacion">
