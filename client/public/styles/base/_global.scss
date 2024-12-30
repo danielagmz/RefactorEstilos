@@ -10,22 +10,13 @@
         text-align: center;
     }
 
+    
+
     &__body {
         &--table {
             margin-top: 2rem;
             width: 80%;
             border-collapse: collapse;
-        }
-
-        &--bento {
-            width: 100%;
-            grid-template-columns: 1fr;
-            grid-template-areas:
-                'customize'
-                'profile'
-                'change-password'
-                'delete-account'
-            ;
         }
 
         &--30W {
@@ -60,6 +51,7 @@
         background-color: var(--fondo);
         width: fit-content;
         line-height: 0.8rem;
+        cursor: pointer;
 
         &:hover {
             background-color: var(--accent);
