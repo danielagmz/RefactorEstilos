@@ -6,9 +6,12 @@ class Router {
 
     // Método para registrar rutas
     public function addRoute($method, $path, $callback) {
+        $pattern = preg_replace('/\{([a-zA-Z0-9_]+)\}/', '(?P<$1>[^/]+)', $path);
+        $pattern = "#^" . $pattern . "$#";
         $this->routes[] = [
             'method' => strtoupper($method),
             'path' => $path,
+            'pattern' => $pattern,
             'callback' => $callback
         ];
     }
@@ -17,29 +20,13 @@ class Router {
     public function dispatch($requestMethod, $requestUri) {
 
         foreach ($this->routes as $route) {
-            if ($route['method'] === strtoupper($requestMethod) && $route['path'] === $requestUri) {
-                // Ejecutar la función o controlador asociado
+            if ($route['method'] === strtoupper($requestMethod) && preg_match($route['pattern'], $requestUri, $matches)) {
+                
+                $params = array_filter($matches, 'is_string', ARRAY_FILTER_USE_KEY);
                 $callback = $route['callback'];
 
                 if (is_callable($callback)) {
-                    // Si es una función o método estático, llámalo directamente
-                    call_user_func($callback);
-                } elseif (is_array($callback) && count($callback) === 2) {
-                    // Si es un controlador [Clase, método]
-                    [$class, $method] = $callback;
-
-                    if (class_exists($class)) {
-                        $controller = new $class(); // Crear instancia
-                        if (method_exists($controller, $method)) {
-                            call_user_func([$controller, $method]);
-                        } else {
-                            echo "Método '$method' no encontrado en la clase '$class'.";
-                        }
-                    } else {
-                        echo "Clase '$class' no encontrada.";
-                    }
-                } else {
-                    echo "Callback no válido.";
+                    call_user_func($callback, $params);
                 }
                 return;
             }

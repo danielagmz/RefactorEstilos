@@ -8,15 +8,17 @@
     <title>Vista de lectura</title>
 </head>
 
-<body>
+<body class="anonimo">
     <div class="container">
-    <?php include_once('client/views/common/nav.php') ?>
+    <?php include_once('client/views/common/nav-anonimo.php') ?>
         <main class="content">
             <div class="content__title"></div>
             <div class="content__body reading__body">
-                    <p class="article__content"></p>
+                <p class="article__content"></p>
             </div>
+            <a class="form__button form__button--mark" href="<?php echo BASE_URL ?>">Tornar</a>
         </main>
+        
 </body>
 
 </html>

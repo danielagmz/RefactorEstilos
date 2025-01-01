@@ -14,18 +14,14 @@
       </button>
    </div>
    <div class="busqueda-barra cabeceras--paginacion">
-      <!-- articles_pagina_user() ?> -->
+      <select name="page" class="busqueda__input--page" id="page">
+         <option value="4">4</option>
+         <option value="8">8</option>
+         <option value="12">12</option>
+         <option value="16">16</option>
+      </select>
       <div class="paginacion">
-         <div class="paginacion__links">
-            <!-- crear_links(
-               isset($_GET['limit']) ? $_GET['limit'] : LIMIT, // Si no hay límite usa 4
-               isset($_GET['page']) ? $_GET['page'] : PAGE, // Si no hay página, usa 1
-               isset($_GET['filter']) ? $_GET['filter'] : '', // Si no hay filtro usa el filtro vacio
-               isset($_GET['action']) ? $_GET['action'] : 'read',
-               isset($_GET['order']) ? $_GET['order'] : ORDER
-            ) ?> -->
-         </div>
-
+         <div class="paginacion__links"></div>
       </div>
       <div class="cabeceras--ordenacion ordenacion">
          <div class=" content_subtitle content__body--row">

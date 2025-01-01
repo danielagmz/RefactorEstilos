@@ -1,1 +1,1 @@
-<link rel="stylesheet" href="client\public\styles\index.css">
+<link rel="stylesheet" href="<?php echo ROOT ?>/client/public/styles/index.css">

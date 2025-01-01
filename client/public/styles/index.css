@@ -319,8 +319,12 @@ input[type=number]::-webkit-outer-spin-button {
 }
 .cabeceras--paginacion {
   display: flex;
-  gap: 1rem;
+  gap: 0.5rem;
   justify-content: space-between;
+}
+.cabeceras--paginacion select {
+  padding: 0.4rem;
+  border-radius: 5px;
 }
 .cabeceras .busqueda-barra {
   border-radius: 0.5rem;
@@ -375,6 +379,31 @@ input[type=number]::-webkit-outer-spin-button {
 .user-table__header {
   font-size: 1.2rem;
   border-bottom: 2px solid var(--accent4);
+}
+
+.dialog {
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: unset;
+  border: unset;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 3;
+  justify-content: center;
+}
+.dialog[open] {
+  display: flex;
+}
+.dialog__content {
+  display: flex;
+  flex-direction: column;
+  max-width: 35%;
+}
+.dialog__close {
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 0.5rem 0.6rem;
+  max-width: fit-content;
+  align-self: flex-end;
 }
 
 .container {
@@ -633,6 +662,17 @@ input[type=number]::-webkit-outer-spin-button {
 }
 .settings .delete-account {
   grid-area: delete-account;
+}
+
+.reading__body {
+  border: 4px solid #000;
+  border-radius: 30px;
+  background-color: #fff;
+  padding: 1.5rem;
+  box-shadow: 10px 10px 0 #000;
+  min-height: 70%;
+  width: 90%;
+  word-break: break-word;
 }
 
 /*# sourceMappingURL=index.css.map */

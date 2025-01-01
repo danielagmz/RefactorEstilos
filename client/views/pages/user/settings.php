@@ -9,10 +9,9 @@
     <?php include('client/public/styles/pages/uploads.php') ?>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cropperjs@1.5.13/dist/cropper.min.css">
     <script src="https://cdn.jsdelivr.net/npm/cropperjs@1.5.13/dist/cropper.min.js"></script>
-    <!-- <script type="module" src="public/javascripts/dialog.js"></script>
-    <script type="module" src="public/javascripts/activePage.js"></script>
-    <script type="module" src="public/javascripts/uploadDialogs.js"></script> -->
-    <script type="module" src="public/javascripts/showme.js"></script>
+    <script type="module" src="client/public/javascripts/user/settings-dialog.js"></script>
+    <!--<script type="module" src="public/javascripts/activePage.js"></script>-->
+    <script type="module" src="client\public\javascripts\common\showme.js"></script>
 
 </head>
 
@@ -59,7 +58,7 @@
                     <p class="settings-body__element-title customize__title content__title"><i class="fi fi-rr-palette"></i> Personalitzar</p>
                     <div class="customize__buttons">
                         <button class="form__button settings__button edit-avatar__button"><i class="fi fi-rr-pen-square"></i> Editar imatge</button>
-                        <button class="form__button settings__button edit-settings__button"><i class="fi fi-rr-pen-square"></i> Editar portada</button>
+                        <button class="form__button settings__button edit-banner__button"><i class="fi fi-rr-pen-square"></i> Editar portada</button>
                     </div>
                 </div>
                 <div class="settings-body__element change-password text__align--center <?= isset($_SESSION['SocialProvider']) ? 'disabled disabled--opacity' : '' ?>">

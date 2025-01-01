@@ -4,8 +4,13 @@
 
     &--paginacion {
         display: flex;
-        gap: 1rem;
+        gap: 0.5rem;
         justify-content: space-between;
+
+        & select{
+            padding: 0.4rem;
+            border-radius: 5px;
+        }
     }
 
     .busqueda-barra {
