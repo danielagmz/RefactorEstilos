@@ -1,5 +1,7 @@
 <?php
+namespace router;
 
+use function controllers\core\{route_error};
 class Router {
     private $routes = [];
 

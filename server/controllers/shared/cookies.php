@@ -1,5 +1,5 @@
 <?php 
-
+namespace controllers\shared;
 /**
  * Guarda un valor en una cookie.
  *

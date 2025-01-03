@@ -1,4 +1,7 @@
 <?php 
+namespace controllers\auth;
+
+use function controllers\shared\{guardar_cookie, borrar_token};
 /**
  * Destruye la sesión actual y redirige a la pagina de inicio
  */

@@ -1,4 +1,5 @@
 <?php 
+namespace router;
 $router->addRoute('GET', '/', function() {
     include 'client/views/pages/guest/read-anonimo.php';
 });

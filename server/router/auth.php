@@ -1,4 +1,5 @@
 <?php 
+namespace router;
 $router->addRoute('GET', '/login', function() {
     include 'client/views/auth/login.php';
 });
