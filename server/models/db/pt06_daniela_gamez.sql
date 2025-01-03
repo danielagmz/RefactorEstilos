@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: proxysql-01.dd.scip.local
--- Tiempo de generación: 03-12-2024 a las 15:06:59
+-- Tiempo de generación: 03-01-2025 a las 19:24:40
 -- Versión del servidor: 10.10.2-MariaDB-1:10.10.2+maria~deb11
 -- Versión de PHP: 8.2.12
 
@@ -18,10 +18,10 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `ddb237155`
+-- Base de datos: `pt06_daniela_gamez`
 --
-CREATE DATABASE IF NOT EXISTS `pt05_daniela_gamez` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `pt05_daniela_gamez`;
+CREATE DATABASE IF NOT EXISTS `pt06_daniela_gamez` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `pt06_daniela_gamez`;
 
 -- --------------------------------------------------------
 
@@ -76,8 +76,8 @@ INSERT INTO `articles` (`id`, `titol`, `cos`, `data_creacio`, `data_modificacio`
 (20, 'El Futuro de la Agricultura con IA', 'La inteligencia artificial está siendo aplicada en la agricultura para optimizar el uso de recursos como el agua y los fertilizantes. Con drones y sensores, los agricultores pueden monitorear sus cultivos de manera más eficiente, lo que reduce costos y aumenta la productividad. Además, la IA está ayudando a predecir plagas y enfermedades, lo que permite tomar decisiones más informadas y mejorar la calidad de los alimentos que consumimos.', '2024-10-13 17:56:20', '2024-10-13 17:56:20', 5),
 (23, 'Importancia de la IA en la Medicina', 'La inteligencia artificial está revolucionando la medicina de maneras sorprendentes y muy valiosas. En primer lugar, la IA permite el análisis de grandes volúmenes de datos médicos, lo que ayuda a los profesionales de la salud a identificar patrones y tendencias que podrían pasar desapercibidos. Esto es especialmente útil en la detección temprana de enfermedades como el cáncer, donde la IA puede analizar imágenes médicas con una precisión asombrosa.\r\n\r\nAdemás, la IA está mejorando la personalización de los tratamientos. A través del análisis de datos genéticos y clínicos, es posible adaptar terapias específicas a las necesidades individuales de cada paciente. Esto no solo aumenta la eficacia del tratamiento, sino que también reduce los efectos secundarios.\r\n\r\nOtro aspecto clave es el uso de chatbots y asistentes virtuales en la atención al paciente. Estos sistemas pueden proporcionar información médica básica, gestionar citas e incluso ofrecer apoyo emocional, permitiendo que los profesionales de la salud se concentren en casos más complejos.\r\n\r\nFinalmente, la IA también juega un papel importante en la investigación médica. Con su capacidad para procesar y analizar datos rápidamente, puede acelerar el desarrollo de nuevos medicamentos y tratamientos.', '2024-11-10 17:53:47', '2024-11-10 17:53:47', 8),
 (24, 'ඞ', 'ඞ', '2024-12-02 15:36:50', '2024-12-02 15:36:50', 18),
-(25, 'Articulo tothalemnte normal', 'No hay amongus', '2024-12-02 19:18:39', '2024-12-02 19:18:39', 18),
-(26, '&lt;c&lt;c&lt;c', '&lt;zc&lt;fWDFZYFKSJETHJET', '2024-12-02 19:19:37', '2024-12-02 19:19:37', 1);
+(25, 'Articulo totalmente normal', 'No hay amongus', '2024-12-02 19:18:39', '2024-12-04 14:56:49', 18),
+(35, 'Habia una vez, un circo que alegraba', 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA', '2024-12-04 15:30:55', '2024-12-04 16:00:29', 28);
 
 -- --------------------------------------------------------
 
@@ -85,7 +85,7 @@ INSERT INTO `articles` (`id`, `titol`, `cos`, `data_creacio`, `data_modificacio`
 -- Estructura de tabla para la tabla `tokens`
 --
 -- Creación: 01-12-2024 a las 03:53:11
--- Última actualización: 01-12-2024 a las 19:01:56
+-- Última actualización: 04-12-2024 a las 15:27:51
 --
 
 DROP TABLE IF EXISTS `tokens`;
@@ -108,20 +108,13 @@ CREATE TABLE `tokens` (
 --
 
 TRUNCATE TABLE `tokens`;
---
--- Volcado de datos para la tabla `tokens`
---
-
-INSERT INTO `tokens` (`id`, `user_id`, `token`, `type`, `tokenExp`) VALUES
-(63, 9, 'c4db82db3e056e33799d5235a998dfaa', 'recoverTK', '2024-12-02 18:37:46');
-
 -- --------------------------------------------------------
 
 --
 -- Estructura de tabla para la tabla `usuaris`
 --
 -- Creación: 01-12-2024 a las 03:53:11
--- Última actualización: 02-12-2024 a las 15:36:35
+-- Última actualización: 08-12-2024 a las 16:20:20
 --
 
 DROP TABLE IF EXISTS `usuaris`;
@@ -153,17 +146,22 @@ TRUNCATE TABLE `usuaris`;
 --
 
 INSERT INTO `usuaris` (`id`, `usuario`, `email`, `pass`, `bio`, `avatar`, `banner`, `admin`, `socialProv`, `created_at`, `updated_at`) VALUES
-(1, 'admin', 'admin@admin.com', '$2y$10$BIleDgvtDHkssNv53xw2aO13VwBTYJ1FZmKD4GlQrMCUbk1rtDcBe', 'bio', 'uploads/674284b86fc29-image.jpg', 'uploads/6742762cd54da-image.jpg', 1, NULL, '2024-11-29 16:33:15', '2024-11-29 16:33:15'),
-(2, 'roger_51', '4hogrlwp4@talk21.com', '$2y$10$hJ5Vz8XeYuSfBfbOihK95.jkcSDeI1FX4ECIj3Y5IBUTwOsNfBzaW', NULL, NULL, NULL, 0, NULL, '2024-11-29 17:33:15', '2024-11-29 17:33:15'),
+(1, 'admin', 'admin@admin.com', '$2y$10$BIleDgvtDHkssNv53xw2aO13VwBTYJ1FZmKD4GlQrMCUbk1rtDcBe', 'bio', 'uploads/6755c73c03ed1-image.jpg', 'uploads/6755c744290a7-image.jpg', 1, NULL, '2024-11-29 15:33:15', '2024-12-08 16:20:20'),
+(2, 'roger_51', '4hogrlwp4@talk21.com', '$2y$10$hJ5Vz8XeYuSfBfbOihK95.jkcSDeI1FX4ECIj3Y5IBUTwOsNfBzaW', NULL, NULL, NULL, 1, NULL, '2024-11-29 17:33:15', '2024-12-04 15:34:10'),
 (3, 'luisangel_72', 'ivl77yaca@lycos.es', '$2y$10$TO3VRIrEOBFVnshlgG0oYOzfdZFMJ9A1OjnpQ7tIeBLeU1CYshZCS', NULL, NULL, NULL, 0, NULL, '2024-11-29 17:33:15', '2024-11-29 17:33:15'),
 (4, 'martin_71', '47vjms9v@talk21.com', '$2y$10$R2aFxfkatEfZn3.Z3hsRJeDlaZWb6syKgfDK/04R1LqT3SwDnmYqO', NULL, NULL, NULL, 0, NULL, '2024-11-29 17:33:15', '2024-11-29 17:33:15'),
 (5, 'anaisabel_82', '661y5fmif@witty.com', '$2y$10$tW6cDQgrP2zI3xxeVpbxj.4S.s/7eb.kHeJ0nGSpwQzQEcv4EGJRu', NULL, NULL, NULL, 0, NULL, '2024-11-29 17:33:15', '2024-11-29 17:33:15'),
 (6, 'ariadna_82', 'qp31jzyc3r@aol.com', '$2y$10$JlmbnTbgibv43CU15geRsOYm9IlD7RoDaVLHWy6E.gqQax63RZZ6a', NULL, NULL, NULL, 0, NULL, '2024-11-29 17:33:15', '2024-11-29 17:33:15'),
 (8, 'Yisustex', 'yisustex@gmail.com', '$2y$10$OCmFowAE2ZM0QAU/v2WV7u9J463A6KcMLtBo8Ov9352ZHwgMrRh5q', NULL, NULL, NULL, 0, NULL, '2024-11-29 17:33:15', '2024-11-29 17:33:15'),
-(9, 'dgamez', 'd.gamez@sapalomera.cat', '$2y$10$2ZljDyJL4ILyfSD0/I.OYOX7iv2AFEpGqvBS8WqzLcF2wB2kydLVa', NULL, NULL, NULL, 0, NULL, '2024-11-29 17:33:15', '2024-11-29 17:33:15'),
 (16, 'Mony6YoRespirareTodosLoVereis', 'kurumichan491@gmail.com', '$2y$10$ZImbgS6XaaPRwNHveWnfW.Py2QPxXB4rHUYoDP6KfxQ5CY/QdQBL2', NULL, NULL, NULL, 0, NULL, '2024-12-01 19:00:49', '2024-12-01 19:09:55'),
 (17, 'ADMlN', 'a.gomez9@sapalomera.cat', '$2y$10$HZ8a1UmUkdfUB/NcLFN5PuLXvweZANdge.QDvnTZYVVU34D7eJ1Sq', NULL, 'uploads/674dd403cd611-image.jpg', NULL, 0, NULL, '2024-12-02 15:35:47', '2024-12-02 15:36:35'),
-(18, 'Pancracio', 'ravirubio2621@gmail.com', '$2y$10$RNf4oip9KZPzDgD4iXuMYuYkU4XjOirODK/iH8RYgxmQiOKCqarnq', NULL, NULL, NULL, 0, NULL, '2024-12-02 15:36:26', '2024-12-02 15:36:26');
+(18, 'Pancracio', 'ravirubio2621@gmail.com', '$2y$10$RNf4oip9KZPzDgD4iXuMYuYkU4XjOirODK/iH8RYgxmQiOKCqarnq', NULL, NULL, NULL, 0, NULL, '2024-12-02 15:36:26', '2024-12-02 15:36:26'),
+(20, 'CosmicComet_c5b752', 'danielagames0608@gmail.com', '', NULL, NULL, NULL, 0, 'github', '2024-12-04 01:36:54', '2024-12-04 01:36:54'),
+(26, 'Dios', 'admin@oni.cat', '$2y$10$IHHM0tYSmVflirg9Y5z4t.rYoKxkcY6w2/.FiChlUnJ6vMDjG8aCi', NULL, NULL, NULL, 0, NULL, '2024-12-04 15:23:15', '2024-12-04 16:59:34'),
+(28, 'ElectricWanderer_b0202e', 'santionieva@gmail.com', '', 'Eri gay?', 'uploads/675078f694069-image.jpg', 'uploads/675079281acb5-image.jpg', 0, 'github', '2024-12-04 15:28:31', '2024-12-04 15:45:44'),
+(29, 'LunarEclipse_a1c746', 'mmilancastro491@gmail.com', '', NULL, NULL, NULL, 0, 'github', '2024-12-04 15:32:43', '2024-12-04 15:32:43'),
+(30, 'VelvetComet_4f1498', 'milan.castro.monica@iescamas.es', '', NULL, NULL, NULL, 0, 'google', '2024-12-04 17:09:12', '2024-12-04 17:09:12'),
+(31, 'LunarWanderer_484c91', 'torres10213@gmail.com', '', NULL, NULL, NULL, 0, 'google', '2024-12-07 16:41:50', '2024-12-07 16:41:50');
 
 --
 -- Índices para tablas volcadas
@@ -197,19 +195,19 @@ ALTER TABLE `usuaris`
 -- AUTO_INCREMENT de la tabla `articles`
 --
 ALTER TABLE `articles`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
 -- AUTO_INCREMENT de la tabla `tokens`
 --
 ALTER TABLE `tokens`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
 
 --
 -- AUTO_INCREMENT de la tabla `usuaris`
 --
 ALTER TABLE `usuaris`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- Restricciones para tablas volcadas
