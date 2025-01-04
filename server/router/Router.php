@@ -1,8 +1,9 @@
 <?php
 namespace router;
 
-use function controllers\core\{route_error};
+use controllers\core\ErrorhandlerTrait;
 class Router {
+    use ErrorhandlerTrait;
     private $routes = [];
 
 
@@ -35,7 +36,7 @@ class Router {
         }
 
         // Si no se encuentra la ruta
-        route_error(404);
+        $this->route_error(404);
     }
 
     function getRoutes() {
