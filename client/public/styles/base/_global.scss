@@ -81,3 +81,25 @@
         background-color: var(--accent);
     }
 }
+
+.busqueda__resultados{
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    /* Por defecto, 1 columna */
+    gap: 1rem;
+    align-items: stretch;
+    width: 80%;
+
+    &:has(> :nth-child(2)) {
+        grid-template-columns: repeat(2, 1fr);
+        /* Si tiene más de 1 hijo, 2 columnas */
+        width: 100%;
+    }
+}
+
+.desactivado{
+    pointer-events: none;
+    cursor: not-allowed;
+    opacity: 0.5;
+}

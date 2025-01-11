@@ -20,6 +20,7 @@
         <main class="content">
             <div class="content__title">Selecciona l'article per esborrar</div>
             <?php include_once('client/views/common/barra_busqueda.php') ?>
+            <div class="busqueda__resultados"></div>
         </main>
     </div>
 </body>

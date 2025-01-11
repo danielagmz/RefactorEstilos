@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Daniela gamez */
 @import url("https://cdn-uicons.flaticon.com/2.6.0/uicons-thin-rounded/css/uicons-thin-rounded.css");
 @import url("https://cdn-uicons.flaticon.com/2.6.0/uicons-thin-chubby/css/uicons-thin-chubby.css");
@@ -114,6 +115,27 @@ input[type=number]::-webkit-outer-spin-button {
 }
 .menu .fi--active {
   background-color: var(--accent);
+}
+
+.busqueda__resultados {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  /* Por defecto, 1 columna */
+  gap: 1rem;
+  align-items: stretch;
+  width: 80%;
+}
+.busqueda__resultados:has(> :nth-child(2)) {
+  grid-template-columns: repeat(2, 1fr);
+  /* Si tiene más de 1 hijo, 2 columnas */
+  width: 100%;
+}
+
+.desactivado {
+  pointer-events: none;
+  cursor: not-allowed;
+  opacity: 0.5;
 }
 
 .article {
@@ -370,6 +392,34 @@ input[type=number]::-webkit-outer-spin-button {
   line-height: 0rem;
   background-color: var(--fondo);
   cursor: pointer;
+}
+
+.paginacion {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.paginacion .num--pages {
+  padding: 0.2rem 0.5rem;
+  background-color: var(--accent2);
+}
+.paginacion .num--pages--active, .paginacion .num--pages:visited, .paginacion .num--pages:focus {
+  color: var(--accent);
+}
+.paginacion .button--page {
+  background-color: var(--accent3);
+  padding: 0.2rem 0.1rem;
+  border-radius: 0.5rem 0rem 0rem 0.5rem;
+}
+.paginacion .button--page--right {
+  border-radius: 0rem 0.5rem 0.5rem 0rem;
+}
+.paginacion .button--page i {
+  vertical-align: unset;
+}
+.paginacion .page--active {
+  background-color: var(--accent);
+  color: var(--fondo);
 }
 
 .user-table {
