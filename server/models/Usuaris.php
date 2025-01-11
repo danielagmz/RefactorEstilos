@@ -4,10 +4,18 @@ namespace Models;
 use Models\core\Database;
 class Usuaris
 {
-    private static $conn=Database::getConnection();
+    private static $conn=null;
+
+    private static function initializeConnection()
+    {
+        if (!self::$conn) {
+            self::$conn = Database::getConnection();
+        }
+    }
 
     public static function getUser($userId)
     {
+        self::initializeConnection();
         try {
             $query = "SELECT * FROM usuaris WHERE id = :userId";
             $statement = self::$conn->prepare($query);

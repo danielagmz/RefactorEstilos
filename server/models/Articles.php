@@ -1,22 +1,27 @@
 <?php
 
 namespace Models;
-
+require_once 'server/models/core/Database.php';
 use Models\core\Database;
+use Models\entities\Article;
 
 class Articles
 {
-    private static $conn=Database::getConnection();
-    public static function getAllArticles($limit, $offset, $filter, $order)
+    private static $conn;
+    private static function initializeConnection()
     {
-
+        if (!self::$conn) {
+            self::$conn = Database::getConnection();
+        }
+    }
+    public static function getAllArticles($filter, $order)
+    {
+        self::initializeConnection();
         try {
-            $sql = "SELECT * FROM articles WHERE titol RLIKE :filter ORDER BY titol $order LIMIT :limit OFFSET :offset";
+            $sql = "SELECT * FROM articles WHERE titol RLIKE :filter ORDER BY titol $order";
             $stmt = self::$conn->prepare($sql);
 
             // Usamos bindValue para asegurarnos de que estos parámetros sean tratados como enteros
-            $stmt->bindValue(':limit', (int)$limit, \PDO::PARAM_INT);
-            $stmt->bindValue(':offset', (int)$offset, \PDO::PARAM_INT);
             $stmt->bindValue(':filter', $filter, \PDO::PARAM_STR);
             $stmt->execute();
             $results = $stmt->fetchAll(\PDO::FETCH_ASSOC);

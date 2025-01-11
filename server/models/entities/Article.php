@@ -1,5 +1,9 @@
 <?php 
-namespace Models;
+namespace Models\entities;
+require_once 'server/models/Usuaris.php';
+
+use Models\Usuaris;
+
 class Article {
     private $id;
     private $titol;
@@ -61,6 +65,27 @@ class Article {
             $this->data_creacio,
             $this->data_modificacio
 
+        );
+    }
+
+    public function toGuestString() {
+        return sprintf(
+            '<article class="article" data-id="%d"> 
+                <div class="article__header">
+                    <div class="article__icon"></div>
+                    <div class="article__title">%s</div>
+                </div>
+                <p class="article__body">%s...</p>
+                <div class="article__footer">
+                    <span class="article__created"><i class="fi fi-rr-add-document icon"></i>%s</span>
+                    <span class="article__author"><i class="fi fi-rr-user icon"></i>%s</span>
+                </div>
+            </article>',
+            $this->id,
+            $this->titol,
+            substr($this->cos, 0, 200),
+            $this->data_creacio,
+            Usuaris::getUser($this->autor)->getUsername()
         );
     }
 }
