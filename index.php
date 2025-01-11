@@ -1,9 +1,15 @@
 <?php
 require_once 'server/lib/vendor/autoload.php';
+require_once 'server/controllers/core/ErrorhandlerTrait.php';
+require_once 'server/controllers/core/BaseTrait.php';
+require_once 'server/controllers/shared/ArticlesController.php';
 require_once 'server/router/Router.php';
 require_once 'server/controllers/env.php';
-require_once 'server/controllers/core/utils.php';
 require_once 'server/controllers/shared/cookies.php';
+require_once 'server/models/Articles.php';
+
+
+use router\Router;
 
 // Crear instancia del router
 $router = new Router();
@@ -21,5 +27,6 @@ $requestMethod = $_SERVER['REQUEST_METHOD'];
 
 $relativeUri = str_replace(ROOT, '', $_SERVER['REQUEST_URI']);
 $relativeUri = strtok($relativeUri, '?'); 
+
 // Despachar la solicitud
 $router->dispatch($requestMethod, $relativeUri);
