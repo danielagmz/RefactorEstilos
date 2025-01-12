@@ -16,6 +16,7 @@
 @import './components/cabeceras';
 @import './components/user-list';
 @import './components/dialog';
+@import './components/select';
 
 // Layouts
 @import './layouts/grid';
@@ -26,3 +27,6 @@
 @import './pages/register';
 @import './pages/settings';
 @import './pages/reading';
+@import './pages/read';
+@import './pages/update';
+@import './pages/delete';

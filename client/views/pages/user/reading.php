@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php include_once('client/views/common/estilos.php');
-    include_once('client\public\javascripts\common\fetchArticles.php')
+    include_once('client/public/javascripts/common/fetchArticles.php')
     ?>
     
     <title>Vista de lectura</title>
