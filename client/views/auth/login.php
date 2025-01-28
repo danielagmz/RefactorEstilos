@@ -18,7 +18,7 @@
         <main class="content">
             <div class="content__title">Logar-se</div>
             <div class="content__body content__body--30W">
-                <form class="form article" action="index.php?action=login" method="POST">
+                <form class="form article" action="<?= ROOT ?>/home">
                     <div class="form__group">
                         <label class="form__label" for="username">Username</label>
                         <input class="form__input" value="<?= isset($username) ? $username : '' ?>" placeholder="patato123" type="text" name="username" id="username" required />

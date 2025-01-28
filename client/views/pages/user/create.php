@@ -17,7 +17,7 @@
         <main class="content">
             <div class="content__title">El teu nou article</div>
             <div class="content__body">
-                <form action="index.php?action=create" method="post" class="form article">
+                <form class="form article">
                     <div class="form__group">
                         <label for="title" class="form__label">Titol</label>
                         <input type="text" name="title" class="form__input" placeholder="Hi havia una vegada..." value="<?= isset($title) ? $title : '' ?>">

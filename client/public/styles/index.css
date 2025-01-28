@@ -138,6 +138,46 @@ input[type=number]::-webkit-outer-spin-button {
   opacity: 0.5;
 }
 
+@media (max-width: 765px) {
+  .busqueda__resultados,
+  .busqueda__resultados:has(> :nth-child(2)) {
+    grid-template-columns: repeat(1, 1fr);
+    /* Siempre 1 columna en pantallas pequeñas */
+  }
+  .menu {
+    font-size: 1rem;
+  }
+  .content__title {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  .cabeceras {
+    flex-direction: column;
+  }
+  .busqueda__resultados {
+    width: 100%;
+  }
+  .banner {
+    width: 100%;
+  }
+  .content__body--bento {
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-areas: "customize" "profile" "change-password" "delete-account";
+  }
+  .customize__buttons {
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    gap: 0.5rem;
+  }
+  .banner__button {
+    width: fit-content;
+    height: fit-content;
+    align-self: center;
+    justify-self: center;
+  }
+}
 .article {
   border: 4px solid #000;
   border-radius: 10px;
@@ -189,6 +229,26 @@ input[type=number]::-webkit-outer-spin-button {
   line-height: 1.4;
   padding-bottom: 2rem;
   word-break: break-word;
+}
+.article .article {
+  position: relative;
+}
+.article::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150px; /* Ancho de la imagen */
+  height: 150px; /* Alto de la imagen */
+  background-image: url("../assets/cruz.svg"); /* Ruta de la imagen */
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0; /* Oculta la imagen por defecto */
+  transform: translate(-50%, -50%); /* Centra la imagen en el contenedor */
+  transition: opacity 0.3s ease; /* Transición suave para la aparición */
+}
+.article:hover::before {
+  opacity: 1;
 }
 
 .form {
@@ -830,7 +890,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .delete .article::before {
-  background-image: url("../assets/icons/cruz.svg"); /* Ruta de la imagen */
+  background-image: url("/backend/Daniela_Gamez_Estilos/client/public/assets/icons/cruz.svg"); /* Ruta de la imagen */
   width: 100px; /* Ancho de la imagen */
   height: 100px; /* Alto de la imagen */
 }
