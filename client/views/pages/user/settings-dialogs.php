@@ -1,6 +1,6 @@
 <dialog class="dialog dialog--change-pass">
     <div class="dialog__content">
-        <button class="dialog__close"><i class="fi fi-rr-cross"></i></button>
+        <button aria-label="tancar" class="dialog__close"><i class="fi fi-rr-cross"></i></button>
         <div class="content__body">
             <form id="changePasswordForm" method="post" class="form article">
                 <div class="content__title">Canviar contrasenya</div>
@@ -26,7 +26,7 @@
                     </div>
                 </div>
                 <div id="responseContainer" class="response-container"></div>
-                <input type="submit" value="Canviar contrasenya" class="form__button form__button--mark">
+                <input aria-label="canviar contrasenya" type="submit" value="Canviar contrasenya" class="form__button form__button--mark">
             </form>
         </div>
     </div>
@@ -34,7 +34,7 @@
 
 <dialog class="dialog dialog--delete-account">
     <div class="dialog__content">
-        <button class="dialog__close"><i class="fi fi-rr-cross"></i></button>
+        <button aria-label="tancar" class="dialog__close"><i class="fi fi-rr-cross"></i></button>
         <div class="content__body">
             <form id="deleteAccountForm" method="post" class="form article">
                 <div class="content__title center">Estas segur?</div>
@@ -43,7 +43,7 @@
                     <input type="password" id="password" name="password" class="form__input">
                 </div>
                 <div id="responseDelete" class="response-container"></div>
-                <input type="submit" value="Eliminar compte" class="form__button banner__button--red">
+                <input aria-label="eliminar compte" type="submit" value="Eliminar compte" class="form__button banner__button--red">
                 <hr>
                 <div class="content__subtitle"><i class="fi fi-rr-comment-info banner__button--red"></i> Es mantindràn els teus articles pero no podras iniciar sessió</div>
             </form>
@@ -53,12 +53,12 @@
 
 <dialog class="dialog dialog__upload--banner">
     <div class="dialog__content">
-        <button class="dialog__close"><i class="fi fi-rr-cross"></i></button>
+        <button aria-label="tancar" class="dialog__close"><i class="fi fi-rr-cross"></i></button>
         <div class="content__body">
             <form id="uploadBannerForm" method="post" class="form article" enctype="multipart/form-data">
                 <div class="content__title">Cargar Banner</div>
                 <div class="form__group">
-                    <input type="file" id="banner" name="banner" class="form__input" accept="image/*">
+                    <input aria-label="cargar banner" type="file" id="banner" name="banner" class="form__input" accept="image/*">
                     <div id="bannerPreviewContainer"></div>
                 </div>
 
@@ -73,12 +73,12 @@
 
 <dialog class="dialog dialog__upload--avatar">
     <div class="dialog__content">
-        <button class="dialog__close"><i class="fi fi-rr-cross"></i></button>
+        <button aria-label="tancar" class="dialog__close"><i class="fi fi-rr-cross"></i></button>
         <div class="content__body">
             <form id="uploadAvatarForm" method="post" class="form article" enctype="multipart/form-data">
                 <div class="content__title">Cargar Avatar</div>
                 <div class="form__group">
-                    <input type="file" id="avatar" name="avatar" class="form__input" accept="image/*">
+                    <input aria-label="cargar avatar" type="file" id="avatar" name="avatar" class="form__input" accept="image/*">
                     <div id="avatarPreviewContainer"></div>
                 </div>
                 <div id="uploadAvatarResponse" class="response-container"></div>

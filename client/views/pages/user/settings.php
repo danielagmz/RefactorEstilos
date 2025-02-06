@@ -55,7 +55,7 @@
                     </div>
                 </form>
                 <div class="settings-body__element customize">
-                    <p class="settings-body__element-title customize__title content__title"><i class="fi fi-rr-palette"></i> Personalitzar</p>
+                    <h1 class="settings-body__element-title customize__title content__title"><i class="fi fi-rr-palette"></i> Personalitzar</h1>
                     <div class="customize__buttons">
                         <button class="form__button settings__button edit-avatar__button"><i class="fi fi-rr-pen-square"></i> Editar imatge</button>
                         <button class="form__button settings__button edit-banner__button"><i class="fi fi-rr-pen-square"></i> Editar portada</button>
@@ -63,7 +63,7 @@
                 </div>
                 <div class="settings-body__element change-password text__align--center <?= isset($_SESSION['SocialProvider']) ? 'disabled disabled--opacity' : '' ?>">
                     <?php if (!isset($_SESSION['SocialProvider'])) : ?>
-                        <div class="settings-body__element-title change-password__title content__title"><i class="fi fi-rr-password-lock"></i> Canviar contrasenya</div>
+                        <h1 class="settings-body__element-title change-password__title content__title"><i class="fi fi-rr-password-lock"></i> Canviar contrasenya</h1>
                         <button class="form__button settings__button change-password__button">Canviar contrasenya</button>
                     <?php endif; ?>
                     <?php if (isset($_SESSION['SocialProvider'])) : ?>
@@ -72,7 +72,7 @@
                     <?php endif; ?>
                 </div>
                 <div class="settings-body__element delete-account text__align--center">
-                    <div class="settings-body__element-title delete-account__title content__title"><i class="fi fi-rr-user-xmark"></i> Eliminar compte</div>
+                    <h1 class="settings-body__element-title delete-account__title content__title"><i class="fi fi-rr-user-xmark"></i> Eliminar compte</h1>
                     <?php if (!isset($_SESSION['SocialProvider'])) : ?>
                         <button id="delete-account" class="form__button settings__button settings__button--red delete-account__button">Eliminar compte</button>
                     <?php endif; ?>

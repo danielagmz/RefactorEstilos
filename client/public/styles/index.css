@@ -12,6 +12,10 @@
   font-family: "Lexend", serif;
 }
 
+fieldset {
+  border: none;
+}
+
 i {
   color: black;
   vertical-align: middle;
@@ -233,7 +237,7 @@ input[type=number]::-webkit-outer-spin-button {
 .article .article {
   position: relative;
 }
-.article::before {
+.article::before:not(.form) {
   content: "";
   position: absolute;
   top: 50%;
@@ -247,7 +251,7 @@ input[type=number]::-webkit-outer-spin-button {
   transform: translate(-50%, -50%); /* Centra la imagen en el contenedor */
   transition: opacity 0.3s ease; /* Transición suave para la aparición */
 }
-.article:hover::before {
+.article:hover::before:not(.form) {
   opacity: 1;
 }
 

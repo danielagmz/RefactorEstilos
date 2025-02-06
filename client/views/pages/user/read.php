@@ -7,7 +7,6 @@
     <?php 
     include_once('client/views/common/estilos.php'); 
     require_once('client/public/javascripts/common/fetchArticles.php');
-    require_once('client/public/javascripts/common/readArticle.php')
     ?>
     <title>Home</title>
 </head>
@@ -16,7 +15,7 @@
     <div class="container read">
     <?php include_once('client/views/common/nav.php') ?>
         <main class="content">
-            <div class="content__title">Els meus articles</div>
+            <h1 class="content__title">Els meus articles</h1>
             <?php include_once('client/views/common/barra_busqueda.php') ?>
             <div class="busqueda__resultados"></div>
         </main>
