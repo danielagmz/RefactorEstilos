@@ -16,3 +16,5 @@ env.php
 canviInfo.html
 lib/
 .github/
+*.indd
+*.idlk
