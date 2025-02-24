@@ -15,4 +15,6 @@ env.php
 .htaccess
 canviInfo.html
 lib/
-.github/
+
+*.indd
+*.idlk
