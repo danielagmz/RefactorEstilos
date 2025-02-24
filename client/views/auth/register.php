@@ -30,14 +30,14 @@
                         <label class="form__label" for="password">Contrasenya</label>
                         <div class="input__group--pass">
                             <input class="form__input" value="<?= isset($password) ? $password : '' ?>" placeholder="••••••••" type="password" name="password" id="password" required />
-                            <i class="fi fi-rr-eye showme"></i>
+                            <i tabindex="0" class="fi fi-rr-eye showme"></i>
                         </div>
                     </div>
                     <div class="form__group">
                         <label class="form__label" for="verifypassword">Confirma la contrasenya</label>
                         <div class="input__group--pass">
                             <input class="form__input" placeholder="••••••••" type="password" name="verifypassword" id="verifypassword" required />
-                            <i class="fi fi-rr-eye showme"></i>
+                            <i tabindex="0" class="fi fi-rr-eye showme"></i>
                         </div>
                     </div>
                     <?= isset($response) ? $response : ''   ?>
