@@ -56,7 +56,7 @@ class ArticlesController
                 http_build_query($params)
             );
         } else {
-            $links .= '<a role="button" class="desactivado button--page"><i class="fi fi-rr-caret-left"></i></a>';
+            $links .= '<a role="button" aria-label="previous page deactivated" class="desactivado button--page"><i class="fi fi-rr-caret-left"></i></a>';
         }
         
         for ($i = 1; $i <= $totalpages; $i++) {
@@ -76,12 +76,12 @@ class ArticlesController
         if ($page < $totalpages) {
             $query_params['page'] = $page + 1;
             $links .= sprintf(
-                '<a role="button" href="%s?%s" aria-label="next page" class="button--page button--page--right"><i class="fi fi-rr-caret-right"></i></a>',
+                '<a role="button" aria-label="next page" href="%s?%s" aria-label="next page" class="button--page button--page--right"><i class="fi fi-rr-caret-right"></i></a>',
                 BaseTrait::url($path),
                 http_build_query($query_params)
             );
         } else {
-            $links .= '<a role="button" class="desactivado button--page button--page--right"><i class="fi fi-rr-caret-right"></i></a>';
+            $links .= '<a role="button" aria-label="next page deactivated" class="desactivado button--page button--page--right"><i class="fi fi-rr-caret-right"></i></a>';
         }
 
         return $links;

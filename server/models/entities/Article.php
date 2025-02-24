@@ -48,7 +48,7 @@ class Article {
     public function __toString()
     {
         return sprintf(
-            '<article class="article" data-id="%d"> 
+            '<article tabindex="0" class="article" data-id="%d"> 
                 <div class="article__header">
                     <div class="article__icon"></div>
                     <div class="article__title">%s</div>

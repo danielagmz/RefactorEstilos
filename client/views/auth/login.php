@@ -55,7 +55,7 @@
                     </div>
                     <?php if(isset($socialLogged) && !$socialLogged):?>
                     <div class="form__group center">
-                        <a class="recover" href="index.php?action=recover_account">He oblidat la contrasenya</a>
+                        <a aria-label="recuperar contrasenya" class="recover" href="index.php?action=recover_account">He oblidat la contrasenya</a>
                     </div>
                     <?php endif; ?>
                 </form>
