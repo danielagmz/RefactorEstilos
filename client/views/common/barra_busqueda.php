@@ -18,11 +18,11 @@
       <div class="cabeceras--ordenacion ordenacion">
          <fieldset class=" content_subtitle content__body--row">
             <legend hidden>Ordenar</legend>
-            <input type="radio" class="ordenacion__input" id="asc" value="ASC" name="orden">
-            <label for="asc" aria-label="ascendente" class="ordenacion__label"><i class="fi fi-rr-sort-alpha-up"></i></label>
+            <input  type="radio" class="ordenacion__input" id="asc" value="ASC" name="orden">
+            <label tabindex="0" for="asc" aria-label="ascendente" class="ordenacion__label"><i class="fi fi-rr-sort-alpha-up"></i></label>
 
             <input type="radio" checked class="ordenacion__input" value="DESC" id="desc" name="orden">
-            <label for="desc" aria-label="descendente" class="ordenacion__label"><i class="fi fi-rr-sort-alpha-down-alt"></i></i></label>
+            <label tabindex="0" for="desc" aria-label="descendente" class="ordenacion__label"><i class="fi fi-rr-sort-alpha-down-alt"></i></i></label>
          </fieldset>
       </div>
    </div>
