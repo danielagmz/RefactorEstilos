@@ -17,7 +17,7 @@
         <main class="content">
             <div class="content__title"> Selecciona l'article per modificar</div>
             <?php include_once('client/views/common/barra_busqueda.php') ?>
-            <div class="busqueda__resultados"><article class="article" data-id="24"> 
+            <div class="busqueda__resultados"><article tabindex="0" class="article" data-id="24"> 
                 <div class="article__header">
                     <div class="article__icon"></div>
                     <div class="article__title">ඞ</div>
@@ -27,7 +27,7 @@
                     <span class="article__created"><i class="fi fi-rr-add-document icon"></i>2024-12-02 16:36:50</span>
                     <span class="article__author"><i class="fi fi-rr-user icon"></i>Pancracio</span>
                 </div>
-            </article><article class="article" data-id="17"> 
+            </article><article tabindex="0" class="article" data-id="17"> 
                 <div class="article__header">
                     <div class="article__icon"></div>
                     <div class="article__title">Robótica en la Industria Moderna</div>
@@ -37,7 +37,7 @@
                     <span class="article__created"><i class="fi fi-rr-add-document icon"></i>2024-10-13 19:56:20</span>
                     <span class="article__author"><i class="fi fi-rr-user icon"></i>roger_51</span>
                 </div>
-            </article><article class="article" data-id="15"> 
+            </article><article tabindex="0" class="article" data-id="15"> 
                 <div class="article__header">
                     <div class="article__icon"></div>
                     <div class="article__title">Realidad Virtual en la Educación</div>
@@ -47,7 +47,7 @@
                     <span class="article__created"><i class="fi fi-rr-add-document icon"></i>2024-10-13 19:56:20</span>
                     <span class="article__author"><i class="fi fi-rr-user icon"></i>anaisabel_82</span>
                 </div>
-            </article><article class="article" data-id="12"> 
+            </article><article tabindex="0" class="article" data-id="12"> 
                 <div class="article__header">
                     <div class="article__icon"></div>
                     <div class="article__title">Nanotecnología: Un Mundo Invisible</div>
